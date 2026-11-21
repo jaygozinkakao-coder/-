@@ -3,131 +3,172 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#32190e">
-<meta name="description" content="معرفی پروژه جایگزین طبیعی پودر کاکائو">
-<title>جایگزین طبیعی پودر کاکائو</title>
+<meta name="description" content="معرفی و سفارش جایگزین طبیعی پودر کاکائو؛ فروش خرده و عمده با استعلام قیمت در واتساپ.">
+<title>جایگزین طبیعی پودر کاکائو | مرتضی ملایی</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
-
 :root {
  --brown:#32190e;
+ --brown2:#1c0d07;
  --gold:#d8ad56;
  --cream:#faf5e9;
  --green:#425c36;
  --text:#30231d;
+ --muted:#75685e;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
+* {
+ box-sizing:border-box;
+ margin:0;
+ padding:0;
+}
 
-html{scroll-behavior:smooth}
+html {
+ scroll-behavior:smooth;
+ scroll-padding-top:90px;
+}
 
-body{
+body {
  font-family:Vazirmatn,Tahoma,sans-serif;
  background:var(--cream);
  color:var(--text);
- line-height:2;
+ line-height:1.9;
 }
 
-.container{
- width:92%;
- max-width:1150px;
+.container {
+ width:min(1150px,92%);
  margin:auto;
 }
 
-header{
+header {
  background:var(--brown);
  color:white;
- padding:18px 0;
+ position:sticky;
+ top:0;
+ z-index:20;
+ box-shadow:0 4px 18px #0002;
 }
 
-.nav{
+.nav {
+ min-height:72px;
  display:flex;
  justify-content:space-between;
  align-items:center;
+ gap:18px;
  flex-wrap:wrap;
- gap:15px;
+ padding:12px 0;
 }
 
-.logo{
+.logo {
  color:var(--gold);
  font-weight:800;
- font-size:21px;
+ font-size:19px;
 }
 
-nav{
+nav {
  display:flex;
  flex-wrap:wrap;
- gap:20px;
+ gap:18px;
 }
 
-nav a{
+nav a {
  color:white;
  text-decoration:none;
  font-size:14px;
 }
 
-nav a:hover{color:var(--gold)}
-
-.hero{
- background:#291309;
- color:white;
- padding:35px 0 50px;
-}
-
-.hero img{
- width:100%;
- display:block;
- border-radius:18px;
- box-shadow:0 15px 40px #0007;
-}
-
-.hero-text{
- text-align:center;
- padding:30px 10px 0;
-}
-
-.hero h1{
+nav a:hover {
  color:var(--gold);
- font-size:clamp(25px,5vw,42px);
+}
+
+.hero {
+ background:radial-gradient(ellipse at top,#60351d 0%,var(--brown2) 72%);
+ color:white;
+ padding:34px 0 55px;
+}
+
+.hero-grid {
+ display:grid;
+ grid-template-columns:1.1fr .9fr;
+ align-items:center;
+ gap:36px;
+}
+
+.hero-copy h1 {
+ font-size:clamp(30px,5vw,48px);
+ line-height:1.5;
+ color:var(--gold);
  margin-bottom:12px;
 }
 
-.hero p{
+.hero-copy p {
  color:#f2e7d5;
- font-size:16px;
+ font-size:17px;
+ max-width:650px;
 }
 
-.btn{
- display:inline-block;
+.hero-image {
+ width:100%;
+ display:block;
+ border-radius:20px;
+ box-shadow:0 18px 45px #0008;
+ border:1px solid #ffffff22;
+}
+
+.actions {
+ display:flex;
+ gap:12px;
+ flex-wrap:wrap;
+ margin-top:22px;
+}
+
+.btn {
+ display:inline-flex;
+ justify-content:center;
+ align-items:center;
+ gap:8px;
  background:var(--gold);
- color:#32190e;
+ color:var(--brown);
  text-decoration:none;
- padding:12px 28px;
- border-radius:9px;
+ padding:12px 22px;
+ border-radius:10px;
  font-weight:800;
- margin-top:20px;
  border:0;
  cursor:pointer;
- font-family:inherit;
+ font:inherit;
 }
 
-.btn:hover{background:#f0ce83}
+.btn:hover {
+ background:#f0ce83;
+}
 
-section{padding:65px 0}
+.btn-outline {
+ border:1px solid var(--gold);
+ color:var(--gold);
+ background:transparent;
+}
 
-.section-title{
+section {
+ padding:68px 0;
+}
+
+.section-title {
  text-align:center;
- margin-bottom:35px;
+ margin-bottom:34px;
 }
 
-.section-title h2{
- font-size:28px;
+.section-title h2 {
+ font-size:clamp(23px,3vw,30px);
  color:var(--brown);
 }
 
-.section-title span{
+.section-title span {
  display:block;
  width:65px;
  height:3px;
@@ -135,163 +176,258 @@ section{padding:65px 0}
  margin:12px auto;
 }
 
-.about{
- background:white;
+.section-title p {
+ color:var(--muted);
+ margin-top:8px;
+}
+
+.about {
+ background:#fff;
  text-align:center;
 }
 
-.about p{
- max-width:850px;
+.about p {
+ max-width:880px;
  margin:auto;
  color:#65574c;
- font-size:16px;
 }
 
-.cards{
+.cards {
  display:grid;
  grid-template-columns:repeat(3,1fr);
- gap:22px;
+ gap:20px;
 }
 
-.card{
- background:white;
- border-radius:15px;
+.card {
+ background:#fff;
+ border-radius:16px;
  padding:25px;
  text-align:center;
  box-shadow:0 5px 22px #4c2c1410;
  border-bottom:4px solid var(--gold);
 }
 
-.card .icon{
- font-size:38px;
- margin-bottom:12px;
+.card .icon {
+ font-size:36px;
+ margin-bottom:8px;
 }
 
-.card h3{
+.card h3 {
  color:var(--brown);
- margin-bottom:10px;
- font-size:19px;
+ margin-bottom:8px;
+ font-size:18px;
 }
 
-.card p{
- color:#75685e;
+.card p {
+ color:var(--muted);
  font-size:14px;
 }
 
-.process{
+.products {
+ background:#fff;
+}
+
+.product-card {
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+}
+
+.product-card .btn {
+ margin-top:16px;
+}
+
+.note {
+ max-width:850px;
+ margin:24px auto 0;
+ text-align:center;
+ color:var(--muted);
+ font-size:13px;
+}
+
+.process {
  background:#eee5d4;
 }
 
-.steps{
+.steps {
  display:grid;
  grid-template-columns:repeat(3,1fr);
  gap:20px;
 }
 
-.step{
- background:white;
+.step {
+ background:#fff;
  padding:24px;
  border-radius:14px;
  text-align:center;
 }
 
-.step b{
+.step b {
  display:block;
  color:var(--green);
- font-size:22px;
+ font-size:20px;
  margin-bottom:8px;
 }
 
-.order{
- background:white;
+.order {
+ background:#fff;
 }
 
-.order-box{
- max-width:700px;
+.order-box {
+ max-width:760px;
  margin:auto;
  background:var(--cream);
  padding:30px;
  border-radius:17px;
 }
 
-form{
+form {
  display:grid;
  grid-template-columns:1fr 1fr;
- gap:17px;
+ gap:16px;
 }
 
-label{
+label {
  display:block;
  font-weight:600;
  font-size:14px;
 }
 
-input,select,textarea{
+input,select,textarea {
  width:100%;
  padding:13px;
  margin-top:6px;
  border:1px solid #ddd0bd;
  border-radius:9px;
- font-family:inherit;
+ font:inherit;
  font-size:14px;
  background:white;
 }
 
-textarea{
+textarea {
  resize:vertical;
- min-height:110px;
+ min-height:105px;
 }
 
-.full{grid-column:1/-1}
+.full {
+ grid-column:1/-1;
+}
 
-form button{
+form button {
  width:100%;
  grid-column:1/-1;
 }
 
-#message{
- display:none;
+.form-hint {
  text-align:center;
- color:var(--green);
- margin-top:15px;
- font-weight:bold;
-}
-
-.contact{
- background:var(--brown);
- color:white;
- text-align:center;
-}
-
-.contact h2{color:var(--gold)}
-
-.contact p{
- color:#eee0d0;
+ color:var(--muted);
+ font-size:13px;
  margin-top:12px;
 }
 
-footer{
- background:#1c0d07;
+.contact {
+ background:var(--brown);
+ color:#fff;
+ text-align:center;
+}
+
+.contact h2 {
+ color:var(--gold);
+}
+
+.contact p {
+ color:#eee0d0;
+ margin-top:10px;
+}
+
+.contact .btn {
+ margin-top:18px;
+}
+
+footer {
+ background:var(--brown2);
  color:#d8c5ae;
  text-align:center;
- padding:22px 10px;
+ padding:24px 10px;
  font-size:13px;
 }
 
-footer strong{color:var(--gold)}
-
-@media(max-width:750px){
- .cards,.steps{grid-template-columns:1fr}
- .nav{justify-content:center}
- nav{justify-content:center;gap:12px}
- .hero{padding-top:20px}
- section{padding:45px 0}
- form{grid-template-columns:1fr}
- .full{grid-column:auto}
- .order-box{padding:18px}
- .section-title h2{font-size:23px}
+footer strong {
+ color:var(--gold);
 }
 
+.whatsapp-float {
+ position:fixed;
+ left:18px;
+ bottom:18px;
+ z-index:30;
+ background:#20b85a;
+ color:white;
+ text-decoration:none;
+ border-radius:999px;
+ padding:12px 18px;
+ font-weight:800;
+ box-shadow:0 6px 20px #0004;
+}
+
+.whatsapp-float:hover {
+ background:#159447;
+}
+
+@media(max-width:800px) {
+ .hero-grid {
+  grid-template-columns:1fr;
+ }
+ .hero-copy {
+  text-align:center;
+ }
+ .hero-copy p {
+  margin:auto;
+ }
+ .actions {
+  justify-content:center;
+ }
+ .cards,.steps {
+  grid-template-columns:1fr 1fr;
+ }
+}
+
+@media(max-width:600px) {
+ .nav {
+  justify-content:center;
+ }
+ .logo {
+  text-align:center;
+ }
+ nav {
+  justify-content:center;
+  gap:10px;
+ }
+ .hero {
+  padding-top:22px;
+ }
+ section {
+  padding:48px 0;
+ }
+ .cards,.steps {
+  grid-template-columns:1fr;
+ }
+ form {
+  grid-template-columns:1fr;
+ }
+ .full {
+  grid-column:auto;
+ }
+ .order-box {
+  padding:18px;
+ }
+ .whatsapp-float {
+  left:12px;
+  bottom:12px;
+  padding:10px 14px;
+  font-size:13px;
+ }
+}
 </style>
 </head>
 
@@ -300,11 +436,13 @@ footer strong{color:var(--gold)}
 <header>
 <div class="container nav">
 <div class="logo">جایگزین طبیعی پودر کاکائو</div>
-<nav>
+
+<nav aria-label="منوی اصلی">
 <a href="#home">صفحه اصلی</a>
 <a href="#about">معرفی پروژه</a>
 <a href="#features">مزایا</a>
-<a href="#process">روش مصرف</a>
+<a href="#products">فروشگاه</a>
+<a href="#process">مراحل توسعه</a>
 <a href="#order">سفارش</a>
 </nav>
 </div>
@@ -313,47 +451,56 @@ footer strong{color:var(--gold)}
 <main>
 
 <section class="hero" id="home">
-<div class="container">
+<div class="container hero-grid">
+
+<div class="hero-copy">
+<h1>جایگزین طبیعی پودر کاکائو</h1>
+
+<p>
+راهکاری نوآورانه برای صنعت غذا؛
+با هدف بررسی کاهش هزینه تولید،
+حفظ کیفیت و ایجاد ارزش افزوده.
+</p>
+
+<div class="actions">
+<a class="btn" href="#products">مشاهده محصولات و سفارش</a>
+<a class="btn btn-outline" href="#about">آشنایی با پروژه</a>
+</div>
+</div>
 
 <img
+class="hero-image"
 src="static/img/startup-poster.jpeg"
-alt="پوستر پروژه جایگزین طبیعی پودر کاکائو"
+alt="مرتضی ملایی و پروژه جایگزین پودر کاکائو"
 >
-
-<div class="hero-text">
-<h1>جایگزین طبیعی پودر کاکائو</h1>
-<p>
-نوآوری در صنعت غذا؛ راهکاری برای کاهش وابستگی به کاکائو،
-کاهش هزینه تولید و ایجاد ارزش افزوده
-</p>
-<a href="#about" class="btn">آشنایی با پروژه</a>
-</div>
 
 </div>
 </section>
 
 <section class="about" id="about">
 <div class="container">
+
 <div class="section-title">
 <h2>درباره پروژه</h2>
 <span></span>
 </div>
 
 <p>
-این پروژه با هدف بررسی و توسعه یک جایگزین طبیعی برای پودر
-کاکائو طراحی شده است. ایده اصلی، ارائه راهکاری برای کاهش
-وابستگی به کاکائو، مدیریت هزینه‌های تولید و ایجاد فرصت‌های
-جدید در صنعت مواد غذایی است.
-
-هدف پروژه، بررسی امکان تولید محصولی با کیفیت مناسب،
-قابلیت استفاده در صنایع غذایی و ظرفیت توسعه در بازار داخلی
-و خارجی است.
+این پروژه با هدف بررسی و توسعه یک جایگزین طبیعی
+برای پودر کاکائو طراحی شده است.
+ایده اصلی، ارائه راهکاری برای کاهش وابستگی به کاکائو،
+مدیریت هزینه‌های تولید و ایجاد فرصت‌های جدید
+در صنعت مواد غذایی است.
+امکان تولید، کیفیت، طعم، رنگ و کاربرد محصول
+باید متناسب با نیاز هر صنعت بررسی و ارزیابی شود.
 </p>
+
 </div>
 </section>
 
 <section id="features">
 <div class="container">
+
 <div class="section-title">
 <h2>ویژگی‌ها و اهداف پروژه</h2>
 <span></span>
@@ -361,61 +508,97 @@ alt="پوستر پروژه جایگزین طبیعی پودر کاکائو"
 
 <div class="cards">
 
-<div class="card">
+<article class="card">
 <div class="icon">📈</div>
-<h3>کاهش هزینه تولید</h3>
-<p>
-بررسی راهکارهای اقتصادی برای کاهش هزینه مواد اولیه
-در فرایند تولید محصولات غذایی.
-</p>
-</div>
+<h3>مدیریت هزینه تولید</h3>
+<p>بررسی راهکارهای اقتصادی برای مدیریت هزینه مواد اولیه در تولید محصولات غذایی.</p>
+</article>
 
-<div class="card">
+<article class="card">
 <div class="icon">🌿</div>
-<h3>توسعه محصول طبیعی</h3>
-<p>
-تمرکز بر استفاده از مواد اولیه طبیعی و بررسی
-ظرفیت تولید یک محصول جایگزین.
-</p>
-</div>
+<h3>توسعه محصول</h3>
+<p>تمرکز بر مواد اولیه و توسعه یک راهکار جایگزین با قابلیت ارزیابی در کاربردهای غذایی.</p>
+</article>
 
-<div class="card">
+<article class="card">
 <div class="icon">🛡️</div>
-<h3>حفظ کیفیت و طعم</h3>
-<p>
-بررسی کیفیت، طعم، رنگ و عملکرد محصول
-در کاربردهای مختلف غذایی.
-</p>
-</div>
+<h3>ارزیابی کیفیت و طعم</h3>
+<p>بررسی کیفیت، طعم، رنگ و عملکرد محصول در کاربردهای مختلف غذایی.</p>
+</article>
 
-<div class="card">
+<article class="card">
 <div class="icon">🏭</div>
-<h3>توسعه صنعت غذا</h3>
-<p>
-ایجاد فرصت برای نوآوری و توسعه محصولات
-جدید در صنایع غذایی.
-</p>
-</div>
+<h3>همکاری با تولیدکنندگان</h3>
+<p>گفت‌وگو با کارخانه‌ها، قنادی‌ها و تولیدکنندگان صنایع غذایی برای بررسی نیازها.</p>
+</article>
 
-<div class="card">
+<article class="card">
 <div class="icon">🌍</div>
-<h3>فرصت بازار</h3>
-<p>
-بررسی ظرفیت عرضه محصول در بازار داخلی
-و امکان توسعه بازارهای صادراتی.
-</p>
-</div>
+<h3>ظرفیت بازار</h3>
+<p>بررسی فرصت‌های عرضه در بازار داخلی و امکان توسعه بازارهای جدید.</p>
+</article>
 
-<div class="card">
+<article class="card">
 <div class="icon">🔬</div>
 <h3>تحقیق و توسعه</h3>
+<p>بررسی علمی ترکیبات، فرمولاسیون و آزمون‌های کیفی محصول.</p>
+</article>
+
+</div>
+</div>
+</section>
+
+<section class="products" id="products">
+<div class="container">
+
+<div class="section-title">
+<h2>فروش و همکاری</h2>
+<span></span>
 <p>
-بررسی علمی ترکیبات، فرمولاسیون و
-آزمون‌های کیفی محصول.
+برای خرید تکی، سفارش عمده یا دریافت اطلاعات محصول،
+درخواست خود را در واتساپ ارسال کنید.
 </p>
 </div>
 
+<div class="cards">
+
+<article class="card product-card">
+<div class="icon">🛍️</div>
+<h3>خرید خرده</h3>
+<p>برای خرید شخصی و دریافت اطلاعات بسته‌بندی و موجودی، استعلام قیمت بگیرید.</p>
+
+<a class="btn" href="https://wa.me/989126818328?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%AE%D8%B1%DB%8C%D8%AF%20%D8%AE%D8%B1%D8%AF%D9%87%20%D9%88%20%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85%20%D9%82%DB%8C%D9%85%D8%AA%20%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C%DB%8C%20%D9%85%DB%8C%E2%80%8C%D9%81%D8%B1%D9%85%D8%A7%DB%8C%DB%8C%D8%AF.">
+استعلام قیمت خرده
+</a>
+</article>
+
+<article class="card product-card">
+<div class="icon">🏭</div>
+<h3>خرید عمده و همکاری</h3>
+<p>کارخانه‌ها، قنادی‌ها و تولیدکنندگان می‌توانند برای دریافت شرایط همکاری تماس بگیرند.</p>
+
+<a class="btn" href="https://wa.me/989126818328?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%AE%D8%B1%DB%8C%D8%AF%20%D8%B9%D9%85%D8%AF%D9%87%20%D9%88%20%D8%B4%D8%B1%D8%A7%DB%8C%D8%B7%20%D9%87%D9%85%DA%A9%D8%A7%D8%B1%DB%8C%20%D8%AF%D8%B1%D8%AE%D9%88%D8%A7%D8%B3%D8%AA%20%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA%20%D8%AF%D8%A7%D8%B1%D9%85.">
+استعلام قیمت عمده
+</a>
+</article>
+
+<article class="card product-card">
+<div class="icon">💬</div>
+<h3>درخواست نمونه و مشاوره</h3>
+<p>برای درخواست نمونه، مشخصات فنی یا گفت‌وگوی اولیه درباره کاربرد محصول پیام دهید.</p>
+
+<a class="btn" href="https://wa.me/989126818328?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%AF%D8%B1%DB%8C%D8%A7%D9%81%D8%AA%20%D9%86%D9%85%D9%88%D9%86%D9%87%20%DB%8C%D8%A7%20%D9%85%D8%B4%D8%A7%D9%88%D8%B1%D9%87%20%D9%85%D8%AD%D8%B5%D9%88%D9%84%20%D8%AA%D9%85%D8%A7%D8%B3%20%D9%85%DB%8C%E2%80%8C%DA%AF%DB%8C%D8%B1%D9%85.">
+درخواست اطلاعات
+</a>
+</article>
+
 </div>
+
+<p class="note">
+قیمت‌ها به‌صورت ثابت در سایت درج نشده‌اند و پس از بررسی نوع سفارش،
+مقدار موردنیاز و شرایط ارسال از طریق واتساپ اعلام می‌شوند.
+</p>
+
 </div>
 </section>
 
@@ -455,9 +638,9 @@ alt="پوستر پروژه جایگزین طبیعی پودر کاکائو"
 <div class="container">
 
 <div class="section-title">
-<h2>درخواست اطلاعات و سفارش</h2>
+<h2>درخواست اطلاعات و ثبت سفارش</h2>
 <span></span>
-<p>برای دریافت اطلاعات بیشتر، فرم زیر را تکمیل کنید.</p>
+<p>فرم را تکمیل کنید تا متن درخواست در واتساپ آماده ارسال شود.</p>
 </div>
 
 <div class="order-box">
@@ -466,18 +649,29 @@ alt="پوستر پروژه جایگزین طبیعی پودر کاکائو"
 
 <label>
 نام و نام خانوادگی
-<input type="text" id="name" required placeholder="نام شما">
+<input type="text" id="name" required autocomplete="name" placeholder="نام شما">
 </label>
 
 <label>
 شماره تماس
-<input type="tel" id="phone" required placeholder="شماره تماس">
+<input type="tel" id="phone" required autocomplete="tel" placeholder="شماره تماس شما">
+</label>
+
+<label>
+نوع خرید
+<select id="saleType" required>
+<option value="">انتخاب کنید</option>
+<option>خرید خرده</option>
+<option>خرید عمده</option>
+<option>همکاری تجاری</option>
+</select>
 </label>
 
 <label>
 نوع درخواست
 <select id="request" required>
 <option value="">انتخاب کنید</option>
+<option>استعلام قیمت</option>
 <option>دریافت اطلاعات محصول</option>
 <option>درخواست نمونه</option>
 <option>ثبت سفارش</option>
@@ -485,25 +679,25 @@ alt="پوستر پروژه جایگزین طبیعی پودر کاکائو"
 </select>
 </label>
 
-<label>
+<label class="full">
 مقدار موردنظر
-<input type="text" id="quantity" placeholder="مقدار یا تعداد">
+<input type="text" id="quantity" placeholder="مثلاً مقدار یا تعداد موردنیاز">
 </label>
 
 <label class="full">
 توضیحات
-<textarea id="details" placeholder="توضیحات خود را بنویسید"></textarea>
+<textarea id="details" placeholder="کاربرد محصول یا توضیحات سفارش خود را بنویسید"></textarea>
 </label>
 
 <button class="btn" type="submit">
-ارسال درخواست
+ارسال درخواست در واتساپ
 </button>
 
 </form>
 
-<div id="message">
-درخواست شما آماده ارسال است.
-</div>
+<p class="form-hint">
+با زدن دکمه، واتساپ باز می‌شود و پیام آماده را می‌توانید بررسی و ارسال کنید.
+</p>
 
 </div>
 </div>
@@ -511,53 +705,74 @@ alt="پوستر پروژه جایگزین طبیعی پودر کاکائو"
 
 <section class="contact">
 <div class="container">
+
 <h2>از ایده تا بازار</h2>
-<p>جایگزین طبیعی پودر کاکائو؛ گامی در مسیر نوآوری صنعت غذا</p>
+
+<p>
+برای استعلام قیمت، سفارش و همکاری با مرتضی ملایی در ارتباط باشید.
+</p>
+
+<a class="btn" href="https://wa.me/989126818328">
+ارتباط مستقیم در واتساپ
+</a>
+
+<p dir="ltr" style="margin-top:12px">
+09126818328
+</p>
+
 </div>
 </section>
 
 </main>
 
 <footer>
-<p>
-پروژه جایگزین طبیعی پودر کاکائو
-</p>
-<p>
-استاد راهنما: <strong>دکتر مازیار مولوی</strong>
-</p>
-<p>
-طراحی و توسعه پروژه
-</p>
+<p>پروژه جایگزین طبیعی پودر کاکائو</p>
+<p>مدیر مجموعه: <strong>مرتضی ملایی</strong></p>
+<p>استاد راهنما: <strong>دکتر مازیار مولوی</strong></p>
 </footer>
 
+<a
+class="whatsapp-float"
+href="https://wa.me/989126818328"
+target="_blank"
+rel="noopener"
+aria-label="سفارش در واتساپ">
+واتساپ | سفارش
+</a>
+
 <script>
-document.getElementById("orderForm").addEventListener("submit",function(e){
+document.getElementById("orderForm").addEventListener("submit", function(e) {
+
  e.preventDefault();
 
- const name=document.getElementById("name").value.trim();
- const phone=document.getElementById("phone").value.trim();
- const request=document.getElementById("request").value;
- const quantity=document.getElementById("quantity").value.trim();
- const details=document.getElementById("details").value.trim();
+ const name = document.getElementById("name").value.trim();
+ const phone = document.getElementById("phone").value.trim();
+ const saleType = document.getElementById("saleType").value;
+ const request = document.getElementById("request").value;
+ const quantity = document.getElementById("quantity").value.trim();
+ const details = document.getElementById("details").value.trim();
 
- if(!name || !phone || !request){
-   alert("لطفاً اطلاعات ضروری را تکمیل کنید.");
-   return;
+ if (!name || !phone || !saleType || !request) {
+  alert("لطفاً اطلاعات ضروری را تکمیل کنید.");
+  return;
  }
 
- const text=
- "درخواست جدید از سایت جایگزین طبیعی پودر کاکائو\n"+
- "نام: "+name+"\n"+
- "تلفن: "+phone+"\n"+
- "نوع درخواست: "+request+"\n"+
- "مقدار: "+quantity+"\n"+
- "توضیحات: "+details;
+ const message = [
+  "سلام، از طریق سایت جایگزین طبیعی پودر کاکائو درخواست دارم.",
+  "نام: " + name,
+  "شماره تماس: " + phone,
+  "نوع خرید: " + saleType,
+  "نوع درخواست: " + request,
+  "مقدار موردنظر: " + (quantity || "اعلام نشده"),
+  "توضیحات: " + (details || "ندارد")
+ ].join("\n");
 
- const message=document.getElementById("message");
- message.style.display="block";
- message.textContent="اطلاعات فرم آماده شد. برای ثبت واقعی سفارش، باید فرم به سرور متصل شود.";
+ const url =
+ "https://wa.me/989126818328?text=" +
+ encodeURIComponent(message);
 
- console.log(text);
+ window.open(url, "_blank", "noopener");
+
 });
 </script>
 
